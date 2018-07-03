@@ -1,3 +1,5 @@
+@echo off
+
 .\install.bat
 
 :: Set vars
