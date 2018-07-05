@@ -1,6 +1,8 @@
 @echo off
 
-.\install.bat
+cmd /c "install.bat"
+
+echo.Update app files:
 
 :: Set vars
 set download="https://drive.google.com/uc?export=download&id=1fEns2ae9QePDdoujNxxrGzy4M-DZE7aZ"
@@ -8,7 +10,11 @@ set saveAs=cache
 set zipPath=".\res\7za.exe"
 
 :: Clear old file
-del %saveAs%
+if exist ./%saveAs% (
+	del %saveAs%
+)
+
+echo.Downloading recent version..
 
 :: Download
 cscript /nologo update.js %download% ./%saveAs%
