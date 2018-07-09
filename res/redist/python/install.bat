@@ -19,7 +19,7 @@ echo.Check Python:
 if errorlevel 1 (
 	if not exist .\python-3.7.0.exe (
 		echo. Downloading Python installer...
-		cscript /nologo %GAMING_CENTER_ROOT%\res\download.js https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe .\python-3.7.0.exe
+		cscript /nologo "%GAMING_CENTER_ROOT%\res\download.js" https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe .\python-3.7.0.exe
 	)
 	
 	echo. Install Python...
