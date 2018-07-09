@@ -6,7 +6,7 @@ echo.Update app files:
 
 :: Set vars
 :: set download="https://drive.google.com/uc?export=download&id=1fEns2ae9QePDdoujNxxrGzy4M-DZE7aZ"
-set download="http://d3i8w87ms3cidi.cloudfront.net/bin/win/release.7z"
+set download="http://d3i8w87ms3cidi.cloudfront.net/bin/win/GamingCenter-bin.7z"
 set saveAs=cache
 set zipPath=".\res\7za.exe"
 
@@ -28,10 +28,10 @@ if not exist ./%saveAs% (
 )
 
 :: Backup old one
-xcopy .\GamingCenter .\_backup\ /s /e /y
+xcopy .\bin .\_backup\ /s /e /y
 
 :: Clear old .ini duples
-del /s /q .\GamingCenter\*_1.ini
+del /s /q .\bin\*_1.ini
 
 :: Do not overwrite ini, copy rest
 %zipPath% x %saveAs% -aoa -xr!*.ini
