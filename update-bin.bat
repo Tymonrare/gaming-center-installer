@@ -3,8 +3,6 @@
 echo.Update app files:
 
 :: Set vars
-:: set download="https://drive.google.com/uc?export=download&id=1fEns2ae9QePDdoujNxxrGzy4M-DZE7aZ"
-set download="http://d3i8w87ms3cidi.cloudfront.net/bin/win/GamingCenter-bin.7z"
 set saveAs=cache
 set zipPath=".\res\7za.exe"
 
@@ -16,7 +14,7 @@ if exist ./%saveAs% (
 echo. Downloading recent version..
 
 :: Download
-cscript /nologo res\download.js %download% ./%saveAs%
+python ./res/py/download-recent-bin.py https://d3i8w87ms3cidi.cloudfront.net bin/app/GamingCenter-win- %saveAs%
 
 :: Print error if not downloaded
 if not exist ./%saveAs% (
