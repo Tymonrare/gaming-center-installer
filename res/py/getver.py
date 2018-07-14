@@ -10,7 +10,7 @@ def get_file_versions(urladress, filepath):
 
 	ns = {'ns' : 'http://s3.amazonaws.com/doc/2006-03-01/'}
 
-	versions = []
+	versions = [0]
 
 	for Contents in root.findall('ns:Contents', ns):
 		text = Contents.find('ns:Key', ns).text

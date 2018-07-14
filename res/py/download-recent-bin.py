@@ -6,7 +6,7 @@ import time
 def reporthook(count, block_size, total_size):
     global start_time
     if count == 0:
-        start_time = time.time()
+        start_time = time.time() - 1
         return
     duration = time.time() - start_time
     progress_size = int(count * block_size)
